@@ -1,9 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import Logo from "../src/assets/logo.png";
 
 export function App() {
- const [selectedView, setSelectedView] = useState(null); // Estado para controlar a exibição
+ const [selectedView, setSelectedView] = useState(null);
+
+ useEffect(() => {
+  const handlePopState = () => {
+   setSelectedView(null);
+  };
+
+  window.addEventListener("popstate", handlePopState);
+
+  return () => {
+   window.removeEventListener("popstate", handlePopState);
+  };
+ }, []);
+
+ const handleViewChange = (view) => {
+  setSelectedView(view);
+  window.history.pushState({}, "", `/${view}`); 
+ };
 
  const celulasAdultas = [
   {
@@ -291,28 +308,27 @@ export function App() {
 
  return (
   <div className="flex flex-col p-5">
-   {/* Logo e título */}
    <div className="flex flex-col items-center">
     <img src={Logo} alt="Logo" className="mb-4" />
    </div>
 
-   {/* Exibição inicial com botões para escolher */}
    {!selectedView && (
     <div className="flex flex-col items-center justify-center mx-auto mt-10 gap-6">
      <button
       className="w-[20rem] h-[5rem] bg-[#923ea3] text-white text-xl font-bold rounded hover:bg-purple-900"
-      onClick={() => setSelectedView("adulto")}
+      onClick={() => handleViewChange("adulto")}
      >
       Rede Adulta
      </button>
      <button
       className="w-[20rem] h-[5rem] bg-green-700 text-white text-xl font-bold rounded hover:bg-green-800"
-      onClick={() => setSelectedView("jovem")}
+      onClick={() => handleViewChange("jovem")}
      >
       Rede Jovem
      </button>
     </div>
    )}
+
    {selectedView && (
     <div className="flex flex-col items-center">
      <div className="max-w-4xl w-full grid gap-6 md:grid-cols-1">
