@@ -7,7 +7,7 @@ export function App() {
    nome: "Maranata",
    lider: "Ronaldo",
    contato: "(51) 99750-3600",
-   contatoWhats: "51997503600",
+   contatoWhats: "+5551997503600",
    Cidade: "Capão da Canoa",
    Bairro: "Santa Luzia",
    Endereço: "Rua Santa Elizabete, 2004",
