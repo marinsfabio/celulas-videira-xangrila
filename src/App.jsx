@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
 import Logo from "../src/assets/logo.png";
 
 export function App() {
+ const [selectedView, setSelectedView] = useState(null); // Estado para controlar a exibição
+
  const celulasAdultas = [
   {
    nome: "Maranata",
@@ -37,7 +40,7 @@ export function App() {
    nome: "Leão da Tribo de Judá",
    lider: "Joel Santos",
    contato: "(51) 99193-4659",
-   contatoWhats: "51991934659",
+   contatoWhats: "+5551991934659",
    Cidade: "Capão da Canoa",
    Bairro: "Santa luzia",
    Endereço: "Rua Gaspar grizza, 888",
@@ -87,7 +90,7 @@ export function App() {
    nome: "Lugar Graça",
    lider: "João Vitor",
    contato: "(51) 99684-3152",
-   contatoWhats: "51996843152",
+   contatoWhats: "+5551996843152",
    Cidade: "Xangri-Lá",
    Bairro: "Centro",
    Endereço: "Rua Pedro Higyno da Silveira, 845",
@@ -117,7 +120,7 @@ export function App() {
    nome: "Atos 2",
    lider: "Felipe Machado",
    contato: "(51) 99753-6535",
-   contatoWhats: "51997536535",
+   contatoWhats: "+5551997536535",
    Cidade: "Xangri-Lá",
    Bairro: "Centro",
    Endereço: "Rua João Prudêncio, 316",
@@ -166,8 +169,8 @@ export function App() {
   {
    nome: "El Elyón",
    lider: "Diego Gomes",
-   contato: "(51) 99123-4303",
-   contatoWhats: "+5551991234303",
+   contato: "(51) 99528-8327",
+   contatoWhats: "+5551995288327",
    Cidade: "Xangri-Lá",
    Bairro: "Noiva do Mar",
    Endereço: "Rua Lírios, Xangri-Lá, 343",
@@ -288,105 +291,91 @@ export function App() {
 
  return (
   <div className="flex flex-col p-5">
+   {/* Logo e título */}
    <div className="flex flex-col items-center">
-    <img src={Logo} />
-    <div className="max-w-4xl w-full grid gap-6 md:grid-cols-1">
-     <h2 className="text-xl font-bold text-white mt-5">Rede Adulto</h2>
-     {celulasAdultas.map((celula, index) => (
-      <div key={index} className="bg-white rounded-lg p-6 ">
-       <h3 className="text-3xl font-bold text-[#923ea3]">{celula.nome}</h3>
-       <p className="text-lg text-[#1a1413] mt-2">
-        <span className="font-bold">Líder:</span> {celula.lider}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Contato:</span> {celula.contato}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Cidade:</span> {celula.Cidade}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Bairro:</span> {celula.Bairro}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Endereço:</span> {celula.Endereço}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Célula kids paralela:</span>{" "}
-        {celula.celula_Kids}
-       </p>
-       <div className="flex mt-4 space-x-2">
-        <a
-         href={`https://wa.me/${celula.contatoWhats}`}
-         target="_blank"
-         rel="noopener noreferrer"
-         className="flex items-center bg-green-700 text-[12px] p-2 rounded text-white hover:bg-green-800"
-        >
-         <FaWhatsapp className="text-xl mr-2" /> Enviar mensagem
-        </a>
-        <a
-         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-          celula.Endereço
-         )}`}
-         target="_blank"
-         rel="noopener noreferrer"
-         className="flex items-center bg-blue-700 text-[12px] p-2 rounded text-white hover:bg-blue-700"
-        >
-         <FaMapMarkerAlt className="text-xl mr-2" /> Abrir no mapa
-        </a>
-       </div>
-      </div>
-     ))}
-    </div>
+    <img src={Logo} alt="Logo" className="mb-4" />
    </div>
 
-   <div className="flex justify-center">
-    <div className="max-w-4xl w-full grid gap-6 md:grid-cols-1">
-     <h2 className="text-xl font-bold text-white mt-6">Rede Jovem</h2>
-     {celulasJovem.map((celula, index) => (
-      <div key={index} className="bg-white rounded-lg p-6">
-       <h3 className="text-3xl font-bold text-[#923ea3]">{celula.nome}</h3>
-       <p className="text-lg text-[#1a1413] mt-2">
-        <span className="font-bold">Líder:</span> {celula.lider}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Contato:</span> {celula.contato}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Rede:</span> {celula.Rede}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Cidade:</span> {celula.Cidade}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Bairro:</span> {celula.Bairro}
-       </p>
-       <p className="text-lg text-[#1a1413] mt-1">
-        <span className="font-bold">Endereço:</span> {celula.Endereço}
-       </p>
-       <div className="flex mt-4 space-x-2">
-        <a
-         href={`https://wa.me/${celula.contatoWhats}`}
-         target="_blank"
-         rel="noopener noreferrer"
-         className="flex items-center bg-green-700 text-[12px] p-2 rounded text-white hover:bg-green-800"
-        >
-         <FaWhatsapp className="text-xl mr-2" /> Enviar mensagem
-        </a>
-        <a
-         href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-          celula.Endereço
-         )}`}
-         target="_blank"
-         rel="noopener noreferrer"
-         className="flex items-center bg-blue-600 text-[12px] p-2 rounded text-white hover:bg-blue-700"
-        >
-         <FaMapMarkerAlt className="text-xl mr-2" /> Abrir no mapa
-        </a>
-       </div>
-      </div>
-     ))}
+   {/* Exibição inicial com botões para escolher */}
+   {!selectedView && (
+    <div className="flex flex-col items-center justify-center mx-auto mt-10 gap-6">
+     <button
+      className="w-[20rem] h-[5rem] bg-[#923ea3] text-white text-xl font-bold rounded hover:bg-purple-900"
+      onClick={() => setSelectedView("adulto")}
+     >
+      Rede Adulta
+     </button>
+     <button
+      className="w-[20rem] h-[5rem] bg-green-700 text-white text-xl font-bold rounded hover:bg-green-800"
+      onClick={() => setSelectedView("jovem")}
+     >
+      Rede Jovem
+     </button>
     </div>
-   </div>
+   )}
+   {selectedView && (
+    <div className="flex flex-col items-center">
+     <div className="max-w-4xl w-full grid gap-6 md:grid-cols-1">
+      <h2 className="text-xl font-bold text-transparent">
+       {selectedView === "adulto" ? "Rede Adulta" : "Rede Jovem"}
+      </h2>
+      {(selectedView === "adulto" ? celulasAdultas : celulasJovem).map(
+       (celula, index) => (
+        <div key={index} className="bg-white rounded-lg p-6">
+         <h3 className="text-3xl font-bold text-[#923ea3]">{celula.nome}</h3>
+         <p className="text-lg text-[#1a1413] mt-2">
+          <span className="font-bold">Líder:</span> {celula.lider}
+         </p>
+         <p className="text-lg text-[#1a1413] mt-1">
+          <span className="font-bold">Contato:</span> {celula.contato}
+         </p>
+         <p className="text-lg text-[#1a1413] mt-1">
+          <span className="font-bold">Cidade:</span> {celula.Cidade}
+         </p>
+         <p className="text-lg text-[#1a1413] mt-1">
+          <span className="font-bold">Bairro:</span> {celula.Bairro}
+         </p>
+         <p className="text-lg text-[#1a1413] mt-1">
+          <span className="font-bold">Endereço:</span> {celula.Endereço}
+         </p>
+         {celula.celula_Kids && (
+          <p className="text-lg text-[#1a1413] mt-1">
+           <span className="font-bold">Célula kids paralela:</span>{" "}
+           {celula.celula_Kids}
+          </p>
+         )}
+         <div className="flex mt-4 space-x-2">
+          <a
+           href={`https://wa.me/${celula.contatoWhats}`}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="flex items-center bg-green-700 text-[12px] p-2 rounded text-white hover:bg-green-800"
+          >
+           <FaWhatsapp className="text-xl mr-2" /> Enviar mensagem
+          </a>
+          <a
+           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+            celula.Endereço
+           )}`}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="flex items-center bg-blue-700 text-[12px] p-2 rounded text-white hover:bg-blue-700"
+          >
+           <FaMapMarkerAlt className="text-xl mr-2" /> Abrir no mapa
+          </a>
+         </div>
+        </div>
+       )
+      )}
+     </div>
+     <button
+      className="bg-[#923ea3] text-white py-2 px-10 rounded mt-4 hover:bg-gray-800"
+      onClick={() => setSelectedView(null)}
+     >
+      Voltar
+     </button>
+    </div>
+   )}
   </div>
  );
 }
