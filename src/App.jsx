@@ -332,12 +332,12 @@ export function App() {
    {selectedView && (
     <div className="flex flex-col items-center">
      <div className="max-w-4xl w-full grid gap-6 md:grid-cols-1">
-      <h2 className="text-xl font-bold text-transparent">
+      <h2 className="text-xl font-bold text-transparent hidden">
        {selectedView === "adulto" ? "Rede Adulta" : "Rede Jovem"}
       </h2>
       {(selectedView === "adulto" ? celulasAdultas : celulasJovem).map(
        (celula, index) => (
-        <div key={index} className="bg-white rounded-lg p-6">
+        <div key={index} className="bg-white rounded-lg p-6 mt-5">
          <h3 className="text-3xl font-bold text-[#923ea3]">{celula.nome}</h3>
          <p className="text-lg text-[#1a1413] mt-2">
           <span className="font-bold">Líder:</span> {celula.lider}
