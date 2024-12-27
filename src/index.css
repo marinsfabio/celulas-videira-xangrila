@@ -3,9 +3,5 @@
 @tailwind utilities;
 
 body {
-  background-image: url('../src/assets/jesussobreasaguas.jpg');
-  background-repeat: repeat;
-  background-position: top;
-  background-color: transparent;
-  background-attachment: fixed;
+  background-color: #1a1413;
 }
