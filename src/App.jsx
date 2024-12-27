@@ -315,13 +315,13 @@ export function App() {
    {!selectedView && (
     <div className="flex flex-col items-center justify-center mx-auto mt-10 gap-6">
      <button
-      className="w-[20rem] h-[5rem] bg-[#923ea3] text-white text-xl font-bold rounded hover:bg-purple-900"
+      className="w-[20rem] h-[5rem] bg-[#923ea3] text-white text-xl font-bold rounded"
       onClick={() => handleViewChange("adulto")}
      >
       Rede Adulta
      </button>
      <button
-      className="w-[20rem] h-[5rem] bg-green-700 text-white text-xl font-bold rounded hover:bg-green-800"
+      className="w-[20rem] h-[5rem] bg-green-700 text-white text-xl font-bold rounded"
       onClick={() => handleViewChange("jovem")}
      >
       Rede Jovem
