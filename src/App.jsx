@@ -104,7 +104,7 @@ export function App() {
    celula_Kids: "Sim",
   },
   {
-   nome: "Lugar Graça",
+   nome: "Lugar da Graça",
    lider: "João Vitor",
    contato: "(51) 99684-3152",
    contatoWhats: "+5551996843152",
