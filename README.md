@@ -1,8 +1,18 @@
-# React + Vite
+# Células Videira Xangri-lá
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi criado para organizar e exibir informações sobre as células da igreja Videira Xangri-lá. Ele fornece uma plataforma interativa para visualizar e gerenciar detalhes das células, incluindo líderes, locais, horários e contatos.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Exibição de todas as células da igreja.
+- Detalhes completos de cada célula, incluindo:
+  - Nome do líder.
+  - Endereço.
+  - Horário das reuniões.
+  - Informações de contato.
+- Tema visual com as cores roxo uva, azul e verde.
+- Interface responsiva para dispositivos móveis e desktops.
+
+## Tecnologias Utilizadas
+
+- **Front-end**: React, Tailwind CSS.
