@@ -34,6 +34,16 @@ export function App() {
    celula_Kids: "Sim",
   },
   {
+      nome: "Herdeiros da Graça",
+      lider: "Felipe Mandelli",
+      contato: "(51) 99745-3003",
+      contatoWhats: "+5551997453003",
+      Cidade: "Xangri-Lá",
+      Bairro: "Centro",
+      Endereço: "Rua Rio Comandaí, 268",
+      celula_Kids: "Sim",
+     },
+  {
    nome: "Graça Sobre Graça",
    lider: "Paulo César",
    contato: "(51) 99806-7061",
