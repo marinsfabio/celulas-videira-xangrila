@@ -19,7 +19,7 @@ export function App() {
 
  const handleViewChange = (view) => {
   setSelectedView(view);
-  window.history.pushState({}, "", `/${view}`); 
+  window.history.pushState({}, "", `/${view}`);
  };
 
  const celulasAdultas = [
@@ -34,15 +34,35 @@ export function App() {
    celula_Kids: "Sim",
   },
   {
-      nome: "Herdeiros da Graça",
-      lider: "Felipe Mandelli",
-      contato: "(51) 99745-3003",
-      contatoWhats: "+5551997453003",
-      Cidade: "Xangri-Lá",
-      Bairro: "Centro",
-      Endereço: "Rua Rio Comandaí, 268",
-      celula_Kids: "Sim",
-     },
+   nome: "Herdeiros da Graça",
+   lider: "Felipe Mandelli",
+   contato: "(51) 99745-3003",
+   contatoWhats: "+5551997453003",
+   Cidade: "Xangri-Lá",
+   Bairro: "Centro",
+   Endereço: "Rua Rio Comandaí, 268",
+   celula_Kids: "Sim",
+  },
+  {
+   nome: "Firmes na Rocha",
+   lider: "Ricardo Jacques",
+   contato: "(51) 983051550",
+   contatoWhats: "+5551983051550",
+   Cidade: "Xangri-Lá",
+   Bairro: "Centro",
+   Endereço: "Rua Rio Apucaé, 510",
+   celula_Kids: "Não",
+  },
+  {
+   nome: "Aliança Eterna",
+   lider: "Rafael Viana",
+   contato: "(51) 989583658",
+   contatoWhats: "+5551989583658",
+   Cidade: "Xangri-Lá",
+   Bairro: "Centro",
+   Endereço: "Rua Rio Camisas, 1605",
+   celula_Kids: "Sim",
+  },
   {
    nome: "Graça Sobre Graça",
    lider: "Paulo César",
