@@ -25,9 +25,9 @@ export function App() {
  const celulasAdultas = [
   {
    nome: "Maranata",
-   lider: "Ronaldo",
-   contato: "(51) 99750-3600",
-   contatoWhats: "+5551997503600",
+   lider: "Paulo Motta",
+   contato: "(51) 99266-8338",
+   contatoWhats: "+5551992668338",
    Cidade: "Capão da Canoa",
    Bairro: "Santa Luzia",
    Endereço: "Rua Santa Elizabete, 2004",
@@ -223,6 +223,16 @@ export function App() {
    Endereço: "Rua Lírios, Xangri-Lá, 343",
    celula_Kids: "Não",
   },
+  {
+      nome: "Leão de Judá ",
+      lider: "Carlos Alberto",
+      contato: "(51) 98175-6119",
+      contatoWhats: "+5551981756119",
+      Cidade: "Xangri-Lá",
+      Bairro: "Centro",
+      Endereço: "Rua Pedro hygino, 1224",
+      celula_Kids: "Sim",
+     },
  ];
 
  const celulasJovem = [
@@ -287,7 +297,7 @@ export function App() {
    contatoWhats: "+5551995941494",
    Cidade: "Xangri-Lá",
    Bairro: "Rainha do Mar",
-   Endereço: "Rua Alameda Safira, 49",
+   Endereço: "Rua Alameda Safira, 40",
   },
   {
    nome: "Noiva de Cristo",
@@ -296,16 +306,7 @@ export function App() {
    contatoWhats: "+5551995040872",
    Cidade: "Xangri-Lá",
    Bairro: "Noiva do Mar",
-   Endereço: "Av. Sul, Xangri-Lá, 951",
-  },
-  {
-   nome: "Kadosh",
-   lider: "Danusa Costa",
-   contato: "(51) 99762-0928",
-   contatoWhats: "+5551997620928",
-   Cidade: "Xangri-Lá",
-   Bairro: "Centro",
-   Endereço: "Rua Rio Camisas, 800",
+   Endereço: "Av. Sul, Xangri-Lá, 921",
   },
   {
    nome: "Chamas vivas",
@@ -334,6 +335,42 @@ export function App() {
    Bairro: "Arpoador",
    Endereço: "Rua O, Xangri-Lá, 157",
   },
+  {
+      nome: "Daniel",
+      lider: "Ingrid Santos",
+      contato: "(51) 99852-0725",
+      contatoWhats: "+5551998520725",
+      Cidade: "Xangri-Lá",
+      Bairro: "Centro",
+      Endereço: "Rua Rio Guarita, 1103",
+     },
+     {
+      nome: "Filhos De Deus",
+      lider: "Alan Cardoso",
+      contato: "(51) 98060-1202",
+      contatoWhats: "+5551980601202",
+      Cidade: "Xangri-Lá",
+      Bairro: "Figueirinha",
+      Endereço: "Rua Arara Azul, 19",
+     },
+     {
+      nome: "Emanuel",
+      lider: "Deiwidy",
+      contato: "(51) 99381-4179",
+      contatoWhats: "+5551993814179",
+      Cidade: "Xangri-Lá",
+      Bairro: "Centro",
+      Endereço: "Rua Rio Novo, 1224",
+     },
+     {
+      nome: "Dinamus",
+      lider: "Brahian",
+      contato: "(51) 99712-0553",
+      contatoWhats: "+5551997120553",
+      Cidade: "Xangri-Lá",
+      Bairro: "Centro",
+      Endereço: "Rua Rio Comandaí, 224",
+     },
  ];
 
  return (
