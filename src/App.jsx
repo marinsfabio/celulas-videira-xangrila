@@ -181,7 +181,7 @@ export function App() {
    Cidade: "Xangri-Lá",
    Bairro: "Arpoador",
    Endereço: "Rua Brasil, Xangri-lá, 435",
-   celula_Kids: "Não, Quarto ás 18:30",
+   celula_Kids: "Não, Terça ás 19:00",
   },
   {
    nome: "Otniel",
